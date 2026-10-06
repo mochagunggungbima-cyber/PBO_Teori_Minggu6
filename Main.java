@@ -1,19 +1,28 @@
 public class Main {
     public static void main(String[] args) {
-        // Membuat objek MechanicalKeyboard
-        MechanicalKeyboard mechKey = new MechanicalKeyboard("Keychron K2", "Wireless/Bluetooth", 84, "Gateron Red Switch");
-        
-        // Membuat objek MembraneKeyboard
-        MembraneKeyboard memKey = new MembraneKeyboard("Logitech K120", "Kabel USB", 104, true);
+        // 1. Instansiasi objek dengan mengirimkan nilai null / kosong
+        MechanicalKeyboard mechKey = new MechanicalKeyboard(null, 0, null);
+        MembraneKeyboard memKey = new MembraneKeyboard(null, null, 0, false);
 
-        // Menampilkan informasi Mechanical Keyboard
+        // 2. Mengisi nilai atribut private menggunakan method Setter
+        // --- Mechanical Keyboard ---
+        mechKey.setMerk("Keychron K2");
+        mechKey.setJumlahTombol(84);
+        mechKey.setTipeSwitch("Gateron Red");
+
+        // --- Membrane Keyboard ---
+        memKey.setMerk("Logitech K120");
+        memKey.setTipeKonek("Kabel USB");
+        memKey.setJumlahTombol(104);
+        memKey.setTahanAir(true);
+
+        // 3. Menampilkan hasil
         mechKey.infoMechanical();
-        mechKey.ketik(); // Memanggil method dari superclass
+        mechKey.ketik();
 
-        System.out.println(); // Baris baru
+        System.out.println(); // Pembatas output
 
-        // Menampilkan informasi Membrane Keyboard
         memKey.infoMembrane();
-        memKey.ketik(); // Memanggil method dari superclass
+        memKey.ketik();
     }
 }
