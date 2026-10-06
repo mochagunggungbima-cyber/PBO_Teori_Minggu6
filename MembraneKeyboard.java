@@ -1,17 +1,15 @@
 public class MembraneKeyboard extends Keyboard {
-    // Atribut tambahan untuk MembraneKeyboard (-)
     private boolean tahanAir;
 
-    // Constructor
+    // Constructor normal (menerima semua parameter)
     public MembraneKeyboard(String merk, String tipeKonek, int jumlahTombol, boolean tahanAir) {
-        // Memanggil constructor superclass (Keyboard)
         super(merk, tipeKonek, jumlahTombol);
         this.tahanAir = tahanAir;
     }
 
-    // Method khusus MembraneKeyboard (+)
+    // Method khusus menampilkan informasi
     public void infoMembrane() {
-        System.out.println("--- Detail Membrane Keyboard ---");
+        System.out.println("=== Detail Membrane Keyboard ===");
         System.out.println("Merk           : " + getMerk());
         System.out.println("Tipe Koneksi   : " + getTipeKonek());
         System.out.println("Jumlah Tombol  : " + getJumlahTombol());
