@@ -1,17 +1,16 @@
 public class Keyboard {
-    // Atribut dengan akses private (-)
     private String merk;
     private String tipeKonek;
     private int jumlahTombol;
 
-    // Constructor
+    // Constructor Superclass
     public Keyboard(String merk, String tipeKonek, int jumlahTombol) {
         this.merk = merk;
         this.tipeKonek = tipeKonek;
         this.jumlahTombol = jumlahTombol;
     }
 
-    // Method (+)
+    // Method ketik
     public void ketik() {
         System.out.println("Keyboard " + merk + " sedang digunakan untuk mengetik.");
     }
